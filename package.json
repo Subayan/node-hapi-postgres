@@ -1,0 +1,31 @@
+{
+  "name": "hapi-postgres",
+  "version": "1.0.0",
+  "description": "this is a demo application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subayan/node-hapi-postgres.git"
+  },
+  "keywords": [
+    "happijs",
+    "postgres"
+  ],
+  "author": "Subayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subayan/node-hapi-postgres/issues"
+  },
+  "homepage": "https://github.com/Subayan/node-hapi-postgres#readme",
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/joi": "^17.1.1",
+    "dotenv": "^8.2.0",
+    "pg": "^7.18.2",
+    "qs": "^6.9.1"
+  }
+}
