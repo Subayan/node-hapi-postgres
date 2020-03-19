@@ -132,14 +132,7 @@ const init = async () => {
 
                 if(whereCaluse.length > 0)
                     whereCaluse = ` WHERE ` + whereCaluse;
-               `SELECT * FROM public."Task" WHERE "id" in (1,2,3) AND status in ('ACTIVE', 'INACTIVE') AND score >= 0  AND score <= 5;`
-                // if(search)
-                // { 
-                //     whereCaluse += `"name" LIKE '%${search}%' OR description LIKE '%${search}%'`
-                // }
-                    //  users = await client.query(`select * from tasks WHERE "name" LIKE '%${search}%' OR description LIKE '%${search}%' OFFSET ${startIndex} LIMIT ${itemsPerPage}`);
-                // else
-                console.log(`select * from "Task" ${whereCaluse} OFFSET ${startIndex} LIMIT ${itemsPerPage}`)
+               
                 users = await client.query(`select * from "Task" ${whereCaluse} OFFSET ${startIndex} LIMIT ${itemsPerPage}`);
 
                 let count =  await client.query(`select count(*) from "Task" ${whereCaluse}`);
@@ -232,7 +225,7 @@ const init = async () => {
 
                 if(whereCaluse.length > 0)
                     whereCaluse = ` WHERE ` + whereCaluse;
-                console.log(`select * from "Task" ${whereCaluse} OFFSET ${startIndex} LIMIT ${itemsPerPage}`)
+                
                 users = await client.query(`select * from "Project" ${whereCaluse} OFFSET ${startIndex} LIMIT ${itemsPerPage}`);
                 
                 let count =  await client.query(`select count(*) from "Project" ${whereCaluse}`);
